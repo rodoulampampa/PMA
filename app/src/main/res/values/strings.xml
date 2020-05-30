@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PMA</string>
+    <string name="proposed_projects">Suggest a project</string>
+    <string name="project_names">Suggest a name for my project</string>
+    <string name="search_hint">Search.....</string>
+    <string name="project_1">Name of the project 1</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+</resources>

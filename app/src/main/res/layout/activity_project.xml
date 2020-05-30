@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        android:paddingTop="50dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/Team_management_tool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="team_man_tool_screen"
+                android:text="Team Management Tool" />
+
+            <Button
+                android:id="@+id/Desing_tool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="design_tool_screen"
+                android:text="Design Tool" />
+
+            <Button
+                android:id="@+id/Communication_platform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="commun_platform_screen"
+                android:text="Communication Platform" />
+
+            <Button
+                android:id="@+id/Cost_Assessment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="cost_assessment_screen"
+                android:text="Cost Assessment" />
+
+            <Button
+                android:id="@+id/Risk_assessment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="risk_assessment_screen"
+                android:text="Risk Assessment" />
+
+            <Button
+                android:id="@+id/Team_risk_assessment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="team_risk_assessment_screen"
+                android:text="Team Risk Assessment" />
+
+            <Button
+                android:id="@+id/Feasibility_study"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="feasibility_study_screen"
+                android:text="Feasibility Study" />
+
+            <Button
+                android:id="@+id/Feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="feedback_screen"
+                android:text="Feedback" />
+
+            <Button
+                android:id="@+id/Team_building_games"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="games_screen"
+                android:text="Team Building Games" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

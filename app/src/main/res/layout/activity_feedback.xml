@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedbackActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Suggested questions for feedback with your team:"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/Question1"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. What’s going well in your role? Any wins (big or small) this week?" />
+
+        <TextView
+            android:id="@+id/Question2"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. What challenges are you facing? Where are you stuck?" />
+
+        <TextView
+            android:id="@+id/Question3"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. What is the business doing, or can be doing, to make you more successful?" />
+        <TextView
+            android:id="@+id/Question4"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. How are you feeling? What’s the morale around you?" />
+
+        <TextView
+            android:id="@+id/Question5"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. On a scale of 1-10, how happy are you? Why?" />
+
+        <TextView
+            android:id="@+id/Question6"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6. What’s the best thing that happened to you this week, either at work or outside of it?" />
+
+        <TextView
+            android:id="@+id/Question7"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7. Provide one idea to improve the product or service provided by your company" />
+
+        <TextView
+            android:id="@+id/Question8"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8. If you owned the company, what’s one thing you would do differently?" />
+
+        <TextView
+            android:id="@+id/Question9"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9. What were some great contributions made by other team members?" />
+
+        <TextView
+            android:id="@+id/Question10"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10. Provide examples of constructive feedback on how I can be a better leader." />
+
+        <TextView
+            android:id="@+id/Question11"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11. What do you need help with? This week? This month?" />
+
+        <TextView
+            android:id="@+id/Question12"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12. What inspires you to succeed every day? " />
+
+        <TextView
+            android:id="@+id/Question13"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13. What is the most meaningful part of your job? " />
+
+        <TextView
+            android:id="@+id/Question14"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14.When do you have the most fun at work? " />
+
+        <TextView
+            android:id="@+id/Question15"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15.What’s your favorite prank? " />
+
+        <TextView
+            android:id="@+id/Question16"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16. Was there a recent team discussion or meeting where you did not get to share your thoughts? Share them here now…" />
+
+        <TextView
+            android:id="@+id/Question17"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17. What’s holding you back from accomplishing your tasks?" />
+    </LinearLayout>
+</ScrollView>

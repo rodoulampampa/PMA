@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="prop_projects" type="id" />
+    <item name="spinner" type="id" />
+    <item name="btngocalendar" type="id" />
+    <item name="date" type="id" />
+</resources>
