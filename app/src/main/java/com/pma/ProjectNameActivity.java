@@ -15,13 +15,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class ProjectNameActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
     ArrayList<ProjectName> projectName;
+
     @Override
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project_name);
-
 
         //Get the spinner from the xml.
         Spinner dropdown = findViewById(R.id.spinner1);
@@ -427,9 +426,8 @@ public class ProjectNameActivity extends AppCompatActivity implements AdapterVie
         listView.setAdapter(new ProjectNameAdapter());
 
     }
-    public void onNothingSelected(AdapterView<?> parent) {
-        // Another interface callback
-    }
+    public void onNothingSelected(AdapterView<?> parent) {}
+
     class ProjectNameAdapter extends ArrayAdapter<ProjectName> {
 
         public ProjectNameAdapter() {

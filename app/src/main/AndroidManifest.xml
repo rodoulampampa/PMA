@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddEventsActivity"></activity>
         <activity android:name=".CalendarActivity" />
         <activity android:name=".TeamRiskAssessmentActivity" />
         <activity android:name=".RiskAssessmentActivity" />

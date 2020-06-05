@@ -6,7 +6,4 @@ public class ProposedProject {
         this.name = name;
         this.description = description;
     }
-
-    public ProposedProject(String s) {
-    }
 }
