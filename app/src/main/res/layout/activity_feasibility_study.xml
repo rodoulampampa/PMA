@@ -1,15 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FeasibilityStudyActivity">
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".ProjectNameActivity">
 
     <TextView
-        android:id="@+id/Question1"
+        android:id="@+id/Intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Fill in the following fields:"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/Q1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="1) Cost Assessment:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/q1ans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="kai auto douleuei"
-        app:layout_constraintEnd_toEndOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_gravity="center"
+        android:ems="11"
+        android:hint="Fill in the estimation here."
+        android:inputType="number"
+        android:padding="10dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/Q2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="2) Number of project risks:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/q2ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="13"
+        android:hint="Fill in the number of risks here."
+        android:inputType="number"
+        android:padding="10dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/Q3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="2) Number of team risks:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/q3ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="15"
+        android:hint="Fill in the number of team risks here."
+        android:inputType="number"
+        android:padding="10dp"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/Save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+
+</LinearLayout>

@@ -3,8 +3,15 @@ package com.pma;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -57,7 +64,8 @@ public class DesignToolActivity extends AppCompatActivity implements AdapterView
                     "&nbsp;&nbsp;&nbsp;&nbsp;" + "12.Profile Diagram <br/>" +
                     "&nbsp;&nbsp;&nbsp;&nbsp;" + "13.Timing Diagram <br/>" +
                     "&nbsp;&nbsp;&nbsp;&nbsp;" + "14.Interaction Overview Diagram <br/>",
-                    "https://online.visual-paradigm.com/" , "https://www.visual-paradigm.com/download/"));
+                    "https://online.visual-paradigm.com/" ,
+                    "https://www.visual-paradigm.com/download/"));
             designTool.add(new DesignTool("<b>" + "2. Creately <br/><br/>" + "</b>" +
                     "<b>" + "Creately" + "</b>" + " is diagramming and design software operated by Cinergix, Pty Ltd. It is a cloud-based diagram tool built on Adobe's Flex/Flash" +
                     "technologies and provides a visual communication platform for Virtual Communicating. It can be used to create infographics, flowcharts, Gantt charts, organisational charts," +
@@ -69,8 +77,7 @@ public class DesignToolActivity extends AppCompatActivity implements AdapterView
                     "<b>" + "Gliffy" + "</b>" + " is software for diagramming via a HTML5 cloud-based app. It is used to create UML diagrams, floor plans, Venn diagrams, flowcharts" +
                     "and various other kinds of diagrams online. Gliffy diagrams can be shared with and edited by users in real time. The SaaS is supported in all modern web-browsers," +
                     "including Google Chrome, Firefox, Safari and Internet Explorer 9+.<br/>" ,
-                    "https://www.gliffy.com/" +
-                    "An application is also available in the same link if you press “Try in Confluence”."));
+                    "https://www.gliffy.com/" ));
             designTool.add(new DesignTool("<b>" + "4. Lucidchart <br/><br/>" + "</b>" +
                     "<b>" + "Lucidchart" + "</b>" + " is a web-based proprietary platform that is used to allow users to collaborate on drawing, revising and sharing charts and diagrams." +
                     "It allows you to create effective and professional flowcharts, org charts, network diagrams, and other useful visuals to organize essential information, promote understanding," +
@@ -161,9 +168,27 @@ public class DesignToolActivity extends AppCompatActivity implements AdapterView
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                DesignTool clicked = designTool.get(position);
+                // setup the alert builder
+                AlertDialog.Builder builder = new AlertDialog.Builder(DesignToolActivity.this);
+                builder.setTitle("Choose a link");
 
+                final DesignTool clicked = designTool.get(position);
 
+                // add a list
+                builder.setItems(clicked.links, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String link = clicked.links[which];
+
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(link));
+                        startActivity(i);
+                    }
+                });
+
+                // create and show the alert dialog
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
     }
