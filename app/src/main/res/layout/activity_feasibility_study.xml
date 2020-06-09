@@ -60,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="2) Number of team risks:"
+        android:text="3) Number of team risks:"
         android:textStyle="bold" />
 
     <EditText
