@@ -33,4 +33,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CalendarActivity.class);
         startActivity(intent);
     }
+    /** Called when the user taps the "Search" ImageButton*/
+    public void search_screen(View view) {
+        Intent intent = new Intent(this, SearchableActivity.class);
+        startActivity(intent);
+    }
 }

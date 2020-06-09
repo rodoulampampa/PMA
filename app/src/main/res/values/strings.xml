@@ -6,4 +6,6 @@
     <string name="project_1">Name of the project 1</string>
     <string name="Yes">Yes</string>
     <string name="No">No</string>
+    <string name="app_label">label</string>
+    <string name="pma">PMA</string>
 </resources>
