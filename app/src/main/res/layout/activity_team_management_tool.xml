@@ -55,13 +55,13 @@
                 android:padding="10dp">
 
                 <RadioButton
-                    android:id="@+id/Yes"
+                    android:id="@+id/q4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Yes" />
 
                 <RadioButton
-                    android:id="@+id/No"
+                    android:id="@+id/q3_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/No" />
@@ -81,13 +81,13 @@
                 android:padding="10dp">
 
                 <RadioButton
-                    android:id="@+id/Yes"
+                    android:id="@+id/q4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Yes" />
 
                 <RadioButton
-                    android:id="@+id/No"
+                    android:id="@+id/q3_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/No" />
@@ -107,13 +107,13 @@
                 android:padding="10dp">
 
                 <RadioButton
-                    android:id="@+id/Yes"
+                    android:id="@+id/q4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Yes" />
 
                 <RadioButton
-                    android:id="@+id/No"
+                    android:id="@+id/q3_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/No" />
@@ -133,13 +133,13 @@
                 android:padding="10dp">
 
                 <RadioButton
-                    android:id="@+id/Yes"
+                    android:id="@+id/q4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Yes" />
 
                 <RadioButton
-                    android:id="@+id/No"
+                    android:id="@+id/q3_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/No" />
@@ -159,13 +159,13 @@
                 android:padding="10dp">
 
                 <RadioButton
-                    android:id="@+id/Yes"
+                    android:id="@+id/q4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Yes" />
 
                 <RadioButton
-                    android:id="@+id/No"
+                    android:id="@+id/q3_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/No" />
@@ -185,13 +185,13 @@
                 android:padding="10dp">
 
                 <RadioButton
-                    android:id="@+id/Yes"
+                    android:id="@+id/q4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Yes" />
 
                 <RadioButton
-                    android:id="@+id/No"
+                    android:id="@+id/q3_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/No" />
@@ -211,13 +211,13 @@
                 android:padding="10dp">
 
                 <RadioButton
-                    android:id="@+id/Yes"
+                    android:id="@+id/q4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Yes" />
 
                 <RadioButton
-                    android:id="@+id/No"
+                    android:id="@+id/q3_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/No" />
@@ -237,13 +237,13 @@
                 android:padding="10dp">
 
                 <RadioButton
-                    android:id="@+id/Yes"
+                    android:id="@+id/q4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Yes" />
 
                 <RadioButton
-                    android:id="@+id/No"
+                    android:id="@+id/q3_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/No" />
@@ -263,13 +263,13 @@
                 android:padding="10dp">
 
                 <RadioButton
-                    android:id="@+id/Yes"
+                    android:id="@+id/q4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Yes" />
 
                 <RadioButton
-                    android:id="@+id/No"
+                    android:id="@+id/q3_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/No" />
@@ -289,13 +289,13 @@
                 android:padding="10dp">
 
                 <RadioButton
-                    android:id="@+id/Yes"
+                    android:id="@+id/q4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Yes" />
 
                 <RadioButton
-                    android:id="@+id/No"
+                    android:id="@+id/q3_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/No" />

@@ -36,12 +36,46 @@ public class FeasibilityStudyActivity extends AppCompatActivity {
                         Log.i("EditText Value = ", editq2ans.getText().toString());
                         Log.i("EditText Value = ", editq3ans.getText().toString());
 
-                        // setup the alert builder
-                        AlertDialog.Builder builder = new AlertDialog.Builder(FeasibilityStudyActivity.this);
-                        builder.setTitle("Result");
-
-                        if (Float.parseFloat(editq1ans.getText().toString()) >= (15000) && Float.parseFloat(editq2ans.getText().toString()) >= (30) && Float.parseFloat(editq3ans.getText().toString()) >= (30))
+                        if (editq1ans.getText().toString().equals("") || editq2ans.getText().toString().equals("") || editq3ans.getText().toString().equals(""))
                         {
+                            // setup the alert builder
+                            AlertDialog.Builder builder = new AlertDialog.Builder(FeasibilityStudyActivity.this);
+                            builder.setTitle("Result:");
+                            builder.setMessage("Please fill in all the fields.");
+
+                            // create and show the alert dialog
+                            AlertDialog dialog = builder.create();
+                            dialog.show();
+                        }
+                        else if (Float.parseFloat(editq1ans.getText().toString()) < (15000) && Float.parseFloat(editq2ans.getText().toString()) <= (10) && Float.parseFloat(editq3ans.getText().toString()) <= (10))
+                        {
+                            // setup the alert builder
+                            AlertDialog.Builder builder = new AlertDialog.Builder(FeasibilityStudyActivity.this);
+                            builder.setTitle("Result:");
+                            builder.setMessage("Your project is definitely feasible.");
+
+                            // create and show the alert dialog
+                            AlertDialog dialog = builder.create();
+                            dialog.show();
+                        }
+                        else if (Float.parseFloat(editq1ans.getText().toString()) < (15000) || Float.parseFloat(editq2ans.getText().toString()) <= (15) || Float.parseFloat(editq3ans.getText().toString()) <= (15))
+                        {
+                            // setup the alert builder
+                            AlertDialog.Builder builder = new AlertDialog.Builder(FeasibilityStudyActivity.this);
+                            builder.setTitle("Result:");
+                            builder.setMessage("Your project is feasible.");
+
+                            // create and show the alert dialog
+                            AlertDialog dialog = builder.create();
+                            dialog.show();
+                        }
+                        else if (Float.parseFloat(editq1ans.getText().toString()) >= (15000) || Float.parseFloat(editq2ans.getText().toString()) >= (30) || Float.parseFloat(editq3ans.getText().toString()) >= (30))
+                        {
+                            // setup the alert builder
+                            AlertDialog.Builder builder = new AlertDialog.Builder(FeasibilityStudyActivity.this);
+                            builder.setTitle("Result:");
+                            builder.setMessage("Your project isn't feasible.");
+
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
                             dialog.show();

@@ -24,7 +24,7 @@ public class SearchableActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.searchable);
+        setContentView(R.layout.activity_search);
 
         mySearchView = (SearchView) findViewById(R.id.Search);
         myList = (ListView) findViewById(R.id.mylist);
