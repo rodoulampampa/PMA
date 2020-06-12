@@ -31,18 +31,19 @@
             android:textStyle="bold" />
 
         <RadioGroup
+            android:id="@+id/radio_group_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp">
 
             <RadioButton
-                android:id="@+id/q4_1"
+                android:id="@+id/q1_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Yes" />
 
             <RadioButton
-                android:id="@+id/q3_2"
+                android:id="@+id/q1_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/No" />
@@ -59,18 +60,19 @@
 
 
         <RadioGroup
+            android:id="@+id/radio_group_2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp">
 
             <RadioButton
-                android:id="@+id/q4_1"
+                android:id="@+id/q2_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Yes" />
 
             <RadioButton
-                android:id="@+id/q3_2"
+                android:id="@+id/q2_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/No" />
@@ -87,12 +89,13 @@
 
 
         <RadioGroup
+            android:id="@+id/radio_group_3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp">
 
             <RadioButton
-                android:id="@+id/q4_1"
+                android:id="@+id/q3_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Yes" />

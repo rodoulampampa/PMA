@@ -143,24 +143,24 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                             AlertDialog dialog = builder.create();
                             dialog.show();
                         }
-                        else if (Float.parseFloat(editq1ans.getText().toString()) <= 8 && !a && b)
+                        else if (Float.parseFloat(editq1ans.getText().toString()) <= 8 && !a && b && c)
                         {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(RiskAssessmentActivity.this);
                             builder.setTitle("Results:");
                             builder.setMessage("1) Project purpose and need is not well-defined.\n\n" +
-                                    "2) Project design and deliverable definition is incomplete." +
-                                    "3) Project schedule is not clearly defined or understood." +
-                                    "4) No control over client priorities." +
-                                    "5) Estimating and/or scheduling errors. " +
-                                    "6) Pressure to arbitrarily reduce task durations and or run tasks in parallel which would increase risk of errors." +
-                                    "7) Delay in earlier project phases jeopardizes ability to meet fixed date. " +
-                                    "8) Added workload or time requirements because of new direction, policy, or statute." +
-                                    "9) Inadequate customer testing." +
-                                    "10) Legal action delays or pauses project. " +
-                                    "11) Customer refuses to approve deliverables/milestones or delays approval, putting pressure on project manager to 'work at risk'." +
-                                    "12) Theft of materials, intellectual property or equipment." +
-                                    "13) Extreme weather leads to loss of resources, materials, premises etc.");
+                                    "2) Project design and deliverable definition is incomplete.\n\n" +
+                                    "3) Project schedule is not clearly defined or understood.\n\n" +
+                                    "4) No control over client priorities.\n\n" +
+                                    "5) Estimating and/or scheduling errors.\n\n" +
+                                    "6) Pressure to arbitrarily reduce task durations and or run tasks in parallel which would increase risk of errors.\n\n" +
+                                    "7) Delay in earlier project phases jeopardizes ability to meet fixed date.\n\n " +
+                                    "8) Added workload or time requirements because of new direction, policy, or statute.\n\n" +
+                                    "9) Inadequate customer testing.\n\n" +
+                                    "10) Legal action delays or pauses project.\n\n " +
+                                    "11) Customer refuses to approve deliverables/milestones or delays approval, putting pressure on project manager to 'work at risk'.\n\n" +
+                                    "12) Theft of materials, intellectual property or equipment.\n\n" +
+                                    "13) Extreme weather leads to loss of resources, materials, premises etc.\n\n");
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -171,7 +171,15 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(RiskAssessmentActivity.this);
                             builder.setTitle("Results:");
-                            builder.setMessage("1) Τeam break.\n\n");
+                            builder.setMessage("1) This project already exists so no customer will want to buy it easily.\n\n" +
+                                    "2) Weak internet signal.\n\n" +
+                                    "3) Project purpose and need is not well-defined.\n\n" +
+                                    "4) Project design and deliverable definition is incomplete.\n\n" +
+                                    "5) Project schedule is not clearly defined or understood.\n\n" +
+                                    "6) No control over client priorities.\n\n" +
+                                    "7) Estimating and/or scheduling errors.\n\n" +
+                                    "8) Pressure to arbitrarily reduce task durations and or run tasks in parallel which would increase risk of errors.\n\n" +
+                                    "9) Delay in earlier project phases jeopardizes ability to meet fixed date.\n\n");
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -182,7 +190,15 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(RiskAssessmentActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("1) Τeam break.\n\n");
+                            builder.setMessage("1) System failure.\n\n" +
+                                    "2) This project already exists so no customer will want to buy it easily.\n\n" +
+                                    "3) Weak internet signal.\n\n" +
+                                    "4) Added workload or time requirements because of new direction, policy, or statute.\n\n" +
+                                    "5) Extreme weather leads to loss of resources, materials, premises etc.\n\n" +
+                                    "6) Theft of materials, intellectual property or equipment.\n\n" +
+                                    "7) Inadequate customer testing.\n\n" +
+                                    "8) Legal action delays or pauses project.\n\n" +
+                                    "9) Customer refuses to approve deliverables/milestones or delays approval, putting pressure on project manager to 'work at risk'.\n\n");
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -193,7 +209,17 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(RiskAssessmentActivity.this);
                             builder.setTitle("Results:");
-                            builder.setMessage("1) Team break.\n\n");
+                            builder.setMessage("1) Added workload or time requirements because of new direction, policy, or statute.\n\n" +
+                                    "2) Inadequate customer testing.\n\n" +
+                                    "3) Legal action delays or pauses project.\n\n" +
+                                    "4) Customer refuses to approve deliverables/milestones or delays approval, putting pressure on project manager to 'work at risk'.\n\n" +
+                                    "5) Theft of materials, intellectual property or equipment.\n\n" +
+                                    "6) Extreme weather leads to loss of resources, materials, premises etc.\n\n" +
+                                    "7) Project purpose and need is not well-defined.\n\n" +
+                                    "8) Project design and deliverable definition is incomplete.\n\n" +
+                                    "9) Project schedule is not clearly defined or understood.\n\n" +
+                                    "10) No control over client priorities.\n\n" +
+                                    "11) Estimating and/or scheduling errors.\n\n");
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
