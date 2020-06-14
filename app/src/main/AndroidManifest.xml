@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Add_a_project"></activity>
         <activity android:name=".CalendarActivity" />
         <activity android:name=".TeamRiskAssessmentActivity" />
         <activity android:name=".RiskAssessmentActivity" />
@@ -23,7 +24,7 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ProjectNameActivity" />
         <activity android:name=".ProposedProjectsActivity" />
-        <activity android:name=".SearchableActivity"/>
+        <activity android:name=".SearchableActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="1) Will communication with team members always be up close?"
+            android:text="1) Will communication with team members always be close?"
             android:textStyle="bold" />
 
         <RadioGroup
@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="2) Will communication with team members be done remotely?"
+            android:text="2) Will communication with team members always be remote?"
             android:textStyle="bold" />
 
 
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="3) Will the communication with the members of the group be done sometimes up close and sometimes remotely?"
+            android:text="3) Will the communication with the members of the group be sometimes close and sometimes remote?"
             android:textStyle="bold" />
 
 

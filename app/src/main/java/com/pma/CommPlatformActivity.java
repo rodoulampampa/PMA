@@ -115,23 +115,46 @@ public class CommPlatformActivity extends AppCompatActivity {
                             }
                         }
 
-                        if (a && !b)
+                        if (a && !b && !c)
                         {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(CommPlatformActivity.this);
-                            builder.setTitle("Result:");
-                            builder.setMessage("");
+                            builder.setTitle("Results:");
+                            builder.setMessage("1) Gmail.\n\n" +
+                                    "2) Google Hangouts.\n\n" +
+                                    "3) Facebook Workplace.\n\n" +
+                                    "4) Cisco Webex Teams.\n\n" +
+                                    "5) Zoho Cliq.\n\n");
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
                             dialog.show();
                         }
-                        else if (a && b)
+                        else if (!a && b && !c)
                         {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(CommPlatformActivity.this);
-                            builder.setTitle("Result:");
-                            builder.setMessage("");
+                            builder.setTitle("Results:");
+                            builder.setMessage("1) Microsoft Teams.\n\n" +
+                                    "2) CA Flowdock.\n\n" +
+                                    "3) Amazon Chime.\n\n" +
+                                    "4) Discord.\n\n" +
+                                    "5) Ryver.\n\n");
+
+                            // create and show the alert dialog
+                            AlertDialog dialog = builder.create();
+                            dialog.show();
+                        }
+                        else if (!a && !b && c)
+                        {
+                            // setup the alert builder
+                            AlertDialog.Builder builder = new AlertDialog.Builder(CommPlatformActivity.this);
+                            builder.setTitle("Results:");
+                            builder.setMessage("1) Chatwork.\n\n" +
+                                    "2) Slack.\n\n" +
+                                    "3) Twist.\n\n" +
+                                    "4) Flock.\n\n" +
+                                    "5) Mattermost.\n\n");
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -142,7 +165,7 @@ public class CommPlatformActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(CommPlatformActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("");
+                            builder.setMessage("The answers you have given do not match. Please change the answers you have given in the fields.");
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();

@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -22,7 +20,7 @@ public class ProfileActivity extends AppCompatActivity {
         // Estw name = xenos
         name = "xenos";
 
-        TextView nameTextView = findViewById(R.id.name_text_view);
+        TextView nameTextView = findViewById(R.id.name);
         nameTextView.setText(name);
 
 
@@ -30,7 +28,12 @@ public class ProfileActivity extends AppCompatActivity {
 
     /** Called when the user taps the "Project(Project Name)" in the "Profile" ImageButton*/
     public void project_screen(View view) {
-        Intent intent = new Intent(this, ProjectActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+    /** Called when the user taps the Floating Action Button*/
+    public void add_a_project_screen(View view) {
+        Intent intent = new Intent(this, Add_a_project.class);
         startActivity(intent);
     }
 
