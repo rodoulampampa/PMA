@@ -32,10 +32,6 @@ public class FeasibilityStudyActivity extends AppCompatActivity {
                 {
                     public void onClick(View view)
                     {
-                        Log.i("EditText Value = ", editq1ans.getText().toString());
-                        Log.i("EditText Value = ", editq2ans.getText().toString());
-                        Log.i("EditText Value = ", editq3ans.getText().toString());
-
                         if (editq1ans.getText().toString().equals("") || editq2ans.getText().toString().equals("") || editq3ans.getText().toString().equals(""))
                         {
                             // setup the alert builder

@@ -29,8 +29,16 @@
             android:text="Project Name:"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text='(in case there is no project name yet, you can leave this field blank and see suggested names on the homepage of the application in "suggest a name for my project")'
+            android:textStyle="italic" />
+
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/project_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -40,7 +48,7 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/title_email"
+            android:id="@+id/title_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -62,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:onClick="saveProject"
             android:text="Save" />
 
     </LinearLayout>

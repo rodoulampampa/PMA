@@ -21,7 +21,7 @@
         <activity android:name=".DesignToolActivity" />
         <activity android:name=".TeamManagementToolActivity" />
         <activity android:name=".ProjectActivity" />
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".MyProjectsActivity" />
         <activity android:name=".ProjectNameActivity" />
         <activity android:name=".ProposedProjectsActivity" />
         <activity android:name=".SearchableActivity" />

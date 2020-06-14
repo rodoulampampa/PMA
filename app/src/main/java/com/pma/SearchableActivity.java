@@ -107,7 +107,7 @@ public class SearchableActivity extends AppCompatActivity {
                 }
                 else if (((TextView) view).getText() == "Profile")
                 {
-                    Intent intent = new Intent(view.getContext(), ProfileActivity.class);
+                    Intent intent = new Intent(view.getContext(), MyProjectsActivity.class);
                     startActivity(intent);
                 }
                 else

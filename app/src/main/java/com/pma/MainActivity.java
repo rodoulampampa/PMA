@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
     /** Called when the user taps the "Profile" ImageButton*/
     public void profile_screen(View view) {
-        Intent intent = new Intent(this, ProfileActivity.class);
+        Intent intent = new Intent(this, MyProjectsActivity.class);
         startActivity(intent);
     }
     /** Called when the user taps the "Calendar" ImageButton*/
@@ -36,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the user taps the "Search" ImageButton*/
     public void search_screen(View view) {
         Intent intent = new Intent(this, SearchableActivity.class);
+        startActivity(intent);
+    }
+    /** Called when the user taps the "See all the options you have" Button*/
+    public void project_screen(View view) {
+        Intent intent = new Intent(this, ProjectActivity.class);
         startActivity(intent);
     }
 }
