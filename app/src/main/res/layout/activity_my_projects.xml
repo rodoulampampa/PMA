@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
-    tools:context=".TeamManagementToolActivity">
+    tools:context=".MyProjectsActivity">
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -36,10 +36,8 @@
 
         <ListView
             android:id="@+id/projects_list"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 

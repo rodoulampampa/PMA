@@ -5,9 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import static com.pma.MyProjectsActivity.loadProjects;
 import static com.pma.MyProjectsActivity.projects;
 import static com.pma.MyProjectsActivity.storeProjects;
 
@@ -38,8 +39,12 @@ public class Add_a_project extends AppCompatActivity {
             return;
         }
 
-        Project newProject = new Project(name, desc);
+        MyProject newProject = new MyProject(name, desc);
         projects.add(newProject);
         storeProjects(projects, this);
+        projects = loadProjects(this);
+
+        Toast.makeText(this, "Project Saved", Toast.LENGTH_LONG).show();
+        finish();
     }
 }

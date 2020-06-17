@@ -6,14 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Switch
-        android:id="@+id/Motivation_switch"
+    <TextView
+        android:id="@+id/quote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:text="Motivation"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="20dp" />
+        android:text='"If your actions inspire others to dream more, learn more, do more and become more, YOU ARE A LEADER."'
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/quote_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="60dp"
+        android:paddingRight="20dp"
+        android:text=" -John Quincy Adams"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/proposed_projects"
@@ -44,7 +53,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="400dp"
         android:onClick="project_screen"
-        android:text="See all the options you have."
+        android:text="See all the options you have"
         app:layout_constraintEnd_toEndOf="@id/project_name"
         app:layout_constraintStart_toStartOf="@id/project_name"
         app:layout_constraintTop_toTopOf="parent" />

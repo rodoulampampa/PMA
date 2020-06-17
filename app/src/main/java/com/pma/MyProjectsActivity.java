@@ -2,13 +2,17 @@ package com.pma;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,7 +25,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class MyProjectsActivity extends AppCompatActivity {
-    static ArrayList<Project> projects;
+    static ArrayList<MyProject> projects;
+    MyProfileAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,28 +34,48 @@ public class MyProjectsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_projects);
 
         projects = loadProjects(this);
+
         ListView listView = findViewById(R.id.projects_list);
-        listView.setAdapter(new ProfileAdapter());
+        adapter = new MyProfileAdapter();
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+                PopupMenu popup = new PopupMenu(MyProjectsActivity.this, view);
+                popup.getMenu().add("Delete");
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        projects.remove(position);
+                        storeProjects(projects, MyProjectsActivity.this);
+                        projects = loadProjects(MyProjectsActivity.this);
+                        adapter.notifyDataSetChanged();
+                        return true;
+                    }
+                });
+                popup.show();
+            }
+        });
     }
 
-    class ProfileAdapter extends ArrayAdapter<Project> {
+    class MyProfileAdapter extends ArrayAdapter<MyProject> {
 
-        public ProfileAdapter() {
-            super(MyProjectsActivity.this, R.layout.add_to_profile);
+        public MyProfileAdapter() {
+            super(MyProjectsActivity.this, R.layout.list_of_projects);
         }
         @NonNull
         @Override
         public View getView(int position, View convertView, @NonNull ViewGroup parent){
             View itemview = convertView;
             if(itemview == null){
-                itemview = MyProjectsActivity.this.getLayoutInflater().inflate(R.layout.add_to_profile, parent, false);
+                itemview = MyProjectsActivity.this.getLayoutInflater().inflate(R.layout.list_of_projects, parent, false);
             }
 
-            TextView text1 = itemview.findViewById(R.id.text1);
-            TextView text2 = itemview.findViewById(R.id.text2);
+            TextView text1 = itemview.findViewById(R.id.project_name_tv);
+            TextView text2 = itemview.findViewById(R.id.project_description_tv);
 
-            text1.setText(Html.fromHtml(projects.get(position).project_name));
-            text2.setText(Html.fromHtml(projects.get(position).project_description));
+            text1.setText(projects.get(position).name);
+            text2.setText(projects.get(position).description);
 
             return itemview;
         }
@@ -67,8 +92,8 @@ public class MyProjectsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    static ArrayList<Project> loadProjects(Activity activity) {
-        ArrayList<Project> list = new ArrayList<>();
+    static ArrayList<MyProject> loadProjects(Activity activity) {
+        ArrayList<MyProject> list = new ArrayList<>();
 
         File filesDir = activity.getFilesDir();
 
@@ -79,18 +104,17 @@ public class MyProjectsActivity extends AppCompatActivity {
                 String name = reader.readLine();
                 String desc = reader.readLine();
 
-                list.add(new Project(name, desc));
+                list.add(new MyProject(name, desc));
 
                 reader.close();
             }catch(IOException e){
                 e.printStackTrace();
             }
         }
-
         return list;
     }
 
-    static void storeProjects(ArrayList<Project> projects, Activity activity) {
+    static void storeProjects(ArrayList<MyProject> projects, Activity activity) {
         File filesDir = activity.getFilesDir();
 
         for(File f : filesDir.listFiles()){
@@ -98,14 +122,14 @@ public class MyProjectsActivity extends AppCompatActivity {
         }
 
         int i = 0;
-        for(Project p : projects){
+        for(MyProject p : projects){
             File file = new File(filesDir, i + ".txt");
 
             try {
                 FileWriter writer = new FileWriter(file);
-                writer.write(p.project_name);
+                writer.write(p.name);
                 writer.write('\n');
-                writer.write(p.project_description);
+                writer.write(p.description);
                 writer.write('\n');
                 writer.close();
             }catch(IOException e){
