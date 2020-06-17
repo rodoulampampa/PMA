@@ -7,11 +7,9 @@ import androidx.appcompat.widget.PopupMenu;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -58,7 +56,7 @@ public class MyProjectsActivity extends AppCompatActivity {
         });
     }
 
-    class MyProfileAdapter extends ArrayAdapter<MyProject> {
+    final class MyProfileAdapter extends ArrayAdapter<MyProject> {
 
         public MyProfileAdapter() {
             super(MyProjectsActivity.this, R.layout.list_of_projects);

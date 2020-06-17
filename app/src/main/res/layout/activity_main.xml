@@ -90,11 +90,11 @@
             app:srcCompat="@drawable/ic_notifications_black_18dp" />
 
         <ImageButton
-            android:id="@+id/Profile"
+            android:id="@+id/My_projects"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="profile_screen"
+            android:onClick="my_projects_screen"
             app:srcCompat="@drawable/ic_person_black_18dp" />
     </LinearLayout>
 

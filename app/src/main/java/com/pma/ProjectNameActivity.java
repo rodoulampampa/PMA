@@ -3,6 +3,7 @@ package com.pma;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -450,9 +451,15 @@ public class ProjectNameActivity extends AppCompatActivity implements AdapterVie
         }
 
         @Override
-        public int getCount(){
-            return projectName.size();
-        }
+        public int getCount(){ return projectName.size(); }
+    }
+
+    /** Called when the user taps the Floating Action Button*/
+    public void add_a_project_name(View view) {
+        // setup the alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Select Project:");
+        builder.setMessage(".");
     }
 
 }

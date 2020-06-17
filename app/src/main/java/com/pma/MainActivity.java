@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ProjectNameActivity.class);
         startActivity(intent);
     }
-    /** Called when the user taps the "Profile" ImageButton*/
-    public void profile_screen(View view) {
+    /** Called when the user taps the "My projects" ImageButton*/
+    public void my_projects_screen(View view) {
         Intent intent = new Intent(this, MyProjectsActivity.class);
         startActivity(intent);
     }

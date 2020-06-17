@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/title_name2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Project Name:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/project_name_tv_suggested"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="ESTW NAME" />
+
+    <TextView
+        android:id="@+id/title_description2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Project Description:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/project_description_tv_suggested"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="ESTW DESCRIPTION" />
+
+
+    <Button
+        android:id="@+id/add_to_my_projects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Add to my projects" />
+
+</LinearLayout>
