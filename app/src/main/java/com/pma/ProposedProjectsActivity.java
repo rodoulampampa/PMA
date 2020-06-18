@@ -3,14 +3,21 @@ package com.pma;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import static com.pma.MyProjectsActivity.loadProjects;
+import static com.pma.MyProjectsActivity.projects;
+import static com.pma.MyProjectsActivity.storeProjects;
 
 
 public class ProposedProjectsActivity extends AppCompatActivity {
@@ -34,7 +41,7 @@ public class ProposedProjectsActivity extends AppCompatActivity {
                 "for online access to the museum's collections of many different groups at the national and international level: general audience and audiences with special interests." +
                 "(eg educational community, researchers and scientists, groups of visitors, families, tourists)."));
         proposedProjects.add(new ProposedProject("Developing an application that is going to help the user search for fellow travelers where they intend to go to the same destination.",
-                "</b>" + "The purpose of this project is to help the user of the application to search for fellow traveler/ fellow travelers who wish to head to the same destination as the user of the application." +
+                "The purpose of this project is to help the user of the application to search for fellow traveler/ fellow travelers who wish to head to the same destination as the user of the application." +
                 "The application will provide the user security in the selection of his fellow travelers and will be adapted to his needs."));
         proposedProjects.add(new ProposedProject("Development of a mobile application that detects diseases and ailments.", "The main goal of this project is to ensure human health and early diagnosis of possible diseases or illnesses that the user of the application may suffer. The user will place parts of his body" +
                 "on mobile parts (such as the camera) and through special programs and sensors used in medical and microbiological laboratories the application will inform the user about the results of his" +
@@ -90,7 +97,7 @@ public class ProposedProjectsActivity extends AppCompatActivity {
         }
         @NonNull
         @Override
-        public View getView(int position, View convertView, @NonNull ViewGroup parent){
+        public View getView(final int position, View convertView, @NonNull ViewGroup parent){
             View itemview = convertView;
             if(itemview == null){
                 itemview = ProposedProjectsActivity.this.getLayoutInflater().inflate(R.layout.add_to_my_projects, parent, false);
@@ -101,6 +108,23 @@ public class ProposedProjectsActivity extends AppCompatActivity {
 
             text1.setText(proposedProjects.get(position).name);
             text2.setText(proposedProjects.get(position).description);
+
+            Button addButton = itemview.findViewById(R.id.add_to_my_projects);
+            addButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    proposedProjects.get(position);
+                    projects = loadProjects(ProposedProjectsActivity.this);
+                    MyProject newProject = new MyProject(proposedProjects.get(position).name, proposedProjects.get(position).description);
+                    projects.add(newProject);
+                    storeProjects(projects,ProposedProjectsActivity.this);
+
+                    Toast.makeText(ProposedProjectsActivity.this, "Project Saved", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(ProposedProjectsActivity.this, MyProjectsActivity.class);
+                    startActivity(intent);
+
+                }
+            });
 
             return itemview;
         }
