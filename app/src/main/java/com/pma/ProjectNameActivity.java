@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -456,10 +457,14 @@ public class ProjectNameActivity extends AppCompatActivity implements AdapterVie
 
     /** Called when the user taps the Floating Action Button*/
     public void add_a_project_name(View view) {
-        // setup the alert builder
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Select Project:");
-        builder.setMessage(".");
-    }
 
+        // setup the alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(ProjectNameActivity.this);
+        builder.setTitle("Add a name:");
+
+
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 }

@@ -76,6 +76,7 @@ public class ProposedProjectsActivity extends AppCompatActivity {
                 "It is a website where the user will enter some data concerning his interests and as a result he will be offered suggested professional fields that he could follow."));
 
 
+
         ListView listView = findViewById(R.id.project_list);
         listView.setAdapter(new ProposedProjectsAdapter());
 
