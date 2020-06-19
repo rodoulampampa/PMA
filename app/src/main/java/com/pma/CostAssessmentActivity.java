@@ -3,6 +3,8 @@ package com.pma;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -58,8 +60,14 @@ public class CostAssessmentActivity extends AppCompatActivity {
                             {
                                 // setup the alert builder
                                 AlertDialog.Builder builder = new AlertDialog.Builder(CostAssessmentActivity.this);
-                                builder.setTitle("Result:");
-                                builder.setMessage("Please fill in all the fields.");
+                                builder.setMessage("Please fill in all the fields.")
+                                        .setCancelable(false)
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                Intent intent = new Intent(CostAssessmentActivity.this, ProjectActivity.class);
+                                                startActivity(intent);
+                                            }
+                                        });
 
                                 // create and show the alert dialog
                                 AlertDialog dialog = builder.create();
@@ -86,8 +94,14 @@ public class CostAssessmentActivity extends AppCompatActivity {
                             {
                                 // setup the alert builder
                                 AlertDialog.Builder builder = new AlertDialog.Builder(CostAssessmentActivity.this);
-                                builder.setTitle("Result:");
-                                builder.setMessage("Please fill in all the fields.");
+                                builder.setMessage("Please fill in all the fields.")
+                                        .setCancelable(false)
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                Intent intent = new Intent(CostAssessmentActivity.this, ProjectActivity.class);
+                                                startActivity(intent);
+                                            }
+                                        });
 
                                 // create and show the alert dialog
                                 AlertDialog dialog = builder.create();
@@ -101,7 +115,14 @@ public class CostAssessmentActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(CostAssessmentActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("To estimate the cost, consider only the cost of the equipment that you will need, the man-hours of the team members and any surprises.\n\n");
+                            builder.setMessage("To estimate the cost, consider only the cost of the equipment that you will need, the man-hours of the team members and any surprises.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(CostAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -112,7 +133,14 @@ public class CostAssessmentActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(CostAssessmentActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("To estimate the cost, consider the cost of the equipment that you will need, the man-hours of the team members and any surprises.\n\n");
+                            builder.setMessage("To estimate the cost, consider the cost of the equipment that you will need, the man-hours of the team members and any surprises.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(CostAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -123,7 +151,14 @@ public class CostAssessmentActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(CostAssessmentActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("Please fill in all the fields.");
+                            builder.setMessage("Please fill in all the fields.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(CostAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -134,7 +169,14 @@ public class CostAssessmentActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(CostAssessmentActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("Question 2 should not be answered according to the choice you have made in question 1, so to estimate the cost you must remove this answer.");
+                            builder.setMessage("Question 2 should not be answered according to the choice you have made in question 1, so to estimate the cost you must remove this answer.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(CostAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -145,7 +187,14 @@ public class CostAssessmentActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(CostAssessmentActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("Question 2 should not be answered according to the choice you have made in question 1, so to estimate the cost you must remove this answer.");
+                            builder.setMessage("Question 2 should not be answered according to the choice you have made in question 1, so to estimate the cost you must remove this answer.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(CostAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -156,7 +205,14 @@ public class CostAssessmentActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(CostAssessmentActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("To estimate the cost, consider the man-hours of the team members, the man-hours of the specialized staff and any surprises.\n\n");
+                            builder.setMessage("To estimate the cost, consider the man-hours of the team members, the man-hours of the specialized staff and any surprises.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(CostAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -168,7 +224,14 @@ public class CostAssessmentActivity extends AppCompatActivity {
                             AlertDialog.Builder builder = new AlertDialog.Builder(CostAssessmentActivity.this);
                             builder.setTitle("Result:");
                             builder.setMessage("To estimate the cost, consider the man-hours of the team members, the man-hours of the specialized staff, the cost of the equipment that you will need" +
-                                            "and any surprises.\n\n");
+                                            "and any surprises.\n\n")
+                                                    .setCancelable(false)
+                                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                        public void onClick(DialogInterface dialog, int id) {
+                                                            Intent intent = new Intent(CostAssessmentActivity.this, ProjectActivity.class);
+                                                            startActivity(intent);
+                                                        }
+                                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -179,7 +242,14 @@ public class CostAssessmentActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(CostAssessmentActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("Are you sure you need so many staff to develop the project? Think about how you can manage your existing staff properly, without the need for more.\n\n");
+                            builder.setMessage("Are you sure you need so many staff to develop the project? Think about how you can manage your existing staff properly, without the need for more.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(CostAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();

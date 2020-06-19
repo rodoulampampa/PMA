@@ -3,8 +3,9 @@ package com.pma;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,8 +37,14 @@ public class FeasibilityStudyActivity extends AppCompatActivity {
                         {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(FeasibilityStudyActivity.this);
-                            builder.setTitle("Result:");
-                            builder.setMessage("Please fill in all the fields.");
+                            builder.setMessage("Please fill in all the fields.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(FeasibilityStudyActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -48,7 +55,14 @@ public class FeasibilityStudyActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(FeasibilityStudyActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("Your project is definitely feasible.");
+                            builder.setMessage("Your project is definitely feasible.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(FeasibilityStudyActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -59,7 +73,14 @@ public class FeasibilityStudyActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(FeasibilityStudyActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("Your project is feasible.");
+                            builder.setMessage("Your project is feasible.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(FeasibilityStudyActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -70,7 +91,14 @@ public class FeasibilityStudyActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(FeasibilityStudyActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("Your project isn't feasible.");
+                            builder.setMessage("Your project isn't feasible.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(FeasibilityStudyActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();

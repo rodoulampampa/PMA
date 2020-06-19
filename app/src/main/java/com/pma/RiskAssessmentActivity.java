@@ -3,6 +3,8 @@ package com.pma;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -55,8 +57,14 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                             {
                                 // setup the alert builder
                                 AlertDialog.Builder builder = new AlertDialog.Builder(RiskAssessmentActivity.this);
-                                builder.setTitle("Result:");
-                                builder.setMessage("Please fill in all the fields.");
+                                builder.setMessage("Please fill in all the fields.")
+                                        .setCancelable(false)
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                Intent intent = new Intent(RiskAssessmentActivity.this, ProjectActivity.class);
+                                                startActivity(intent);
+                                            }
+                                        });
 
                                 // create and show the alert dialog
                                 AlertDialog dialog = builder.create();
@@ -83,8 +91,14 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                             {
                                 // setup the alert builder
                                 AlertDialog.Builder builder = new AlertDialog.Builder(RiskAssessmentActivity.this);
-                                builder.setTitle("Result:");
-                                builder.setMessage("Please fill in all the fields.");
+                                builder.setMessage("Please fill in all the fields.")
+                                        .setCancelable(false)
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                Intent intent = new Intent(RiskAssessmentActivity.this, ProjectActivity.class);
+                                                startActivity(intent);
+                                            }
+                                        });
 
                                 // create and show the alert dialog
                                 AlertDialog dialog = builder.create();
@@ -110,8 +124,14 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                             default:
                                 // setup the alert builder
                                 AlertDialog.Builder builder = new AlertDialog.Builder(RiskAssessmentActivity.this);
-                                builder.setTitle("Result:");
-                                builder.setMessage("Please fill in all the fields.");
+                                builder.setMessage("Please fill in all the fields.")
+                                        .setCancelable(false)
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                Intent intent = new Intent(RiskAssessmentActivity.this, ProjectActivity.class);
+                                                startActivity(intent);
+                                            }
+                                        });
 
                                 // create and show the alert dialog
                                 AlertDialog dialog = builder.create();
@@ -123,8 +143,14 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                         {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(RiskAssessmentActivity.this);
-                            builder.setTitle("Result:");
-                            builder.setMessage("Please fill in all the fields.");
+                            builder.setMessage("Please fill in all the fields.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(RiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -137,7 +163,14 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                             builder.setTitle("Result:");
                             builder.setMessage("You have many team members in your team.\n\n" +
                                     " I would suggest that you consider the possibility of splitting into two subgroups that communicate with each " +
-                                    "other when required.");
+                                    "other when required.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(RiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -160,7 +193,14 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                                     "10) Legal action delays or pauses project.\n\n " +
                                     "11) Customer refuses to approve deliverables/milestones or delays approval, putting pressure on project manager to 'work at risk'.\n\n" +
                                     "12) Theft of materials, intellectual property or equipment.\n\n" +
-                                    "13) Extreme weather leads to loss of resources, materials, premises etc.\n\n");
+                                    "13) Extreme weather leads to loss of resources, materials, premises etc.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(RiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -179,7 +219,14 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                                     "6) No control over client priorities.\n\n" +
                                     "7) Estimating and/or scheduling errors.\n\n" +
                                     "8) Pressure to arbitrarily reduce task durations and or run tasks in parallel which would increase risk of errors.\n\n" +
-                                    "9) Delay in earlier project phases jeopardizes ability to meet fixed date.\n\n");
+                                    "9) Delay in earlier project phases jeopardizes ability to meet fixed date.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(RiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -198,7 +245,14 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                                     "6) Theft of materials, intellectual property or equipment.\n\n" +
                                     "7) Inadequate customer testing.\n\n" +
                                     "8) Legal action delays or pauses project.\n\n" +
-                                    "9) Customer refuses to approve deliverables/milestones or delays approval, putting pressure on project manager to 'work at risk'.\n\n");
+                                    "9) Customer refuses to approve deliverables/milestones or delays approval, putting pressure on project manager to 'work at risk'.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(RiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -219,7 +273,14 @@ public class RiskAssessmentActivity extends AppCompatActivity {
                                     "8) Project design and deliverable definition is incomplete.\n\n" +
                                     "9) Project schedule is not clearly defined or understood.\n\n" +
                                     "10) No control over client priorities.\n\n" +
-                                    "11) Estimating and/or scheduling errors.\n\n");
+                                    "11) Estimating and/or scheduling errors.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(RiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();

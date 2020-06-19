@@ -3,6 +3,8 @@ package com.pma;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -50,8 +52,14 @@ public class CommPlatformActivity extends AppCompatActivity {
                             {
                                 // setup the alert builder
                                 AlertDialog.Builder builder = new AlertDialog.Builder(CommPlatformActivity.this);
-                                builder.setTitle("Result:");
-                                builder.setMessage("Please fill in all the fields.");
+                                builder.setMessage("Please fill in all the fields.")
+                                        .setCancelable(false)
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                Intent intent = new Intent(CommPlatformActivity.this, ProjectActivity.class);
+                                                startActivity(intent);
+                                            }
+                                        });
 
                                 // create and show the alert dialog
                                 AlertDialog dialog = builder.create();
@@ -78,8 +86,14 @@ public class CommPlatformActivity extends AppCompatActivity {
                             {
                                 // setup the alert builder
                                 AlertDialog.Builder builder = new AlertDialog.Builder(CommPlatformActivity.this);
-                                builder.setTitle("Result:");
-                                builder.setMessage("Please fill in all the fields.");
+                                builder.setMessage("Please fill in all the fields.")
+                                        .setCancelable(false)
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                Intent intent = new Intent(CommPlatformActivity.this, ProjectActivity.class);
+                                                startActivity(intent);
+                                            }
+                                        });
 
                                 // create and show the alert dialog
                                 AlertDialog dialog = builder.create();
@@ -105,8 +119,14 @@ public class CommPlatformActivity extends AppCompatActivity {
                             {
                                 // setup the alert builder
                                 AlertDialog.Builder builder = new AlertDialog.Builder(CommPlatformActivity.this);
-                                builder.setTitle("Result:");
-                                builder.setMessage("Please fill in all the fields.");
+                                builder.setMessage("Please fill in all the fields.")
+                                        .setCancelable(false)
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                Intent intent = new Intent(CommPlatformActivity.this, ProjectActivity.class);
+                                                startActivity(intent);
+                                            }
+                                        });
 
                                 // create and show the alert dialog
                                 AlertDialog dialog = builder.create();
@@ -124,7 +144,14 @@ public class CommPlatformActivity extends AppCompatActivity {
                                     "2) Google Hangouts.\n\n" +
                                     "3) Facebook Workplace.\n\n" +
                                     "4) Cisco Webex Teams.\n\n" +
-                                    "5) Zoho Cliq.\n\n");
+                                    "5) Zoho Cliq.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(CommPlatformActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -139,7 +166,14 @@ public class CommPlatformActivity extends AppCompatActivity {
                                     "2) CA Flowdock.\n\n" +
                                     "3) Amazon Chime.\n\n" +
                                     "4) Discord.\n\n" +
-                                    "5) Ryver.\n\n");
+                                    "5) Ryver.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(CommPlatformActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -154,7 +188,14 @@ public class CommPlatformActivity extends AppCompatActivity {
                                     "2) Slack.\n\n" +
                                     "3) Twist.\n\n" +
                                     "4) Flock.\n\n" +
-                                    "5) Mattermost.\n\n");
+                                    "5) Mattermost.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(CommPlatformActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -165,7 +206,14 @@ public class CommPlatformActivity extends AppCompatActivity {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(CommPlatformActivity.this);
                             builder.setTitle("Result:");
-                            builder.setMessage("The answers you have given do not match. Please change the answers you have given in the fields.");
+                            builder.setMessage("The answers you have given do not match. Please change the answers you have given in the fields.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(CommPlatformActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();

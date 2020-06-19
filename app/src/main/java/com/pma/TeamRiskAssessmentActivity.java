@@ -3,6 +3,8 @@ package com.pma;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -55,8 +57,14 @@ public class TeamRiskAssessmentActivity extends AppCompatActivity {
                                 {
                                     // setup the alert builder
                                     AlertDialog.Builder builder = new AlertDialog.Builder(TeamRiskAssessmentActivity.this);
-                                    builder.setTitle("Result:");
-                                    builder.setMessage("Please fill in all the fields.");
+                                    builder.setMessage("Please fill in all the fields.")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    Intent intent = new Intent(TeamRiskAssessmentActivity.this, ProjectActivity.class);
+                                                    startActivity(intent);
+                                                }
+                                            });
 
                                     // create and show the alert dialog
                                     AlertDialog dialog = builder.create();
@@ -83,8 +91,14 @@ public class TeamRiskAssessmentActivity extends AppCompatActivity {
                                 {
                                     // setup the alert builder
                                     AlertDialog.Builder builder = new AlertDialog.Builder(TeamRiskAssessmentActivity.this);
-                                    builder.setTitle("Result:");
-                                    builder.setMessage("Please fill in all the fields.");
+                                    builder.setMessage("Please fill in all the fields.")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    Intent intent = new Intent(TeamRiskAssessmentActivity.this, ProjectActivity.class);
+                                                    startActivity(intent);
+                                                }
+                                            });
 
                                     // create and show the alert dialog
                                     AlertDialog dialog = builder.create();
@@ -115,8 +129,14 @@ public class TeamRiskAssessmentActivity extends AppCompatActivity {
                         {
                             // setup the alert builder
                             AlertDialog.Builder builder = new AlertDialog.Builder(TeamRiskAssessmentActivity.this);
-                            builder.setTitle("Result:");
-                            builder.setMessage("Please fill in all the fields.");
+                            builder.setMessage("Please fill in all the fields.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(TeamRiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -129,7 +149,14 @@ public class TeamRiskAssessmentActivity extends AppCompatActivity {
                             builder.setTitle("Result:");
                             builder.setMessage("You have many team members in your team.\n\n" +
                                     " I would suggest that you consider the possibility of splitting into two subgroups that communicate with each " +
-                                    "other when required.");
+                                    "other when required.")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(TeamRiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -145,7 +172,14 @@ public class TeamRiskAssessmentActivity extends AppCompatActivity {
                                     "3) Intense group disagreements.\n\n" +
                                     "4) Decision-making risk.\n\n" +
                                     "5) Wariness risk.\n\n" +
-                                    "6) Intra-task deadlock risk.\n\n");
+                                    "6) Intra-task deadlock risk.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(TeamRiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -161,7 +195,14 @@ public class TeamRiskAssessmentActivity extends AppCompatActivity {
                                     "3) Improper division of tasks.\n\n" +
                                     "4) Intense group disagreements.\n\n" +
                                     "5) Interpersonal conflict risk.\n\n" +
-                                    "6) Intra-task deadlock risk.\n\n");
+                                    "6) Intra-task deadlock risk.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(TeamRiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -177,7 +218,14 @@ public class TeamRiskAssessmentActivity extends AppCompatActivity {
                                     "3) Improper division of tasks.\n\n" +
                                     "4) Interpersonal conflict risk.\n\n" +
                                     "5) Intra-task deadlock risk.\n\n" +
-                                    "6) Coordination risk.\n\n");
+                                    "6) Coordination risk.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(TeamRiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();
@@ -194,7 +242,14 @@ public class TeamRiskAssessmentActivity extends AppCompatActivity {
                                     "4) Intra-task deadlock risk.\n\n" +
                                     "5) Group member inactivity.\n\n" +
                                     "6) Decision-making risk.\n\n" +
-                                    "7) Wariness risk.\n\n");
+                                    "7) Wariness risk.\n\n")
+                                    .setCancelable(false)
+                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Intent intent = new Intent(TeamRiskAssessmentActivity.this, ProjectActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
 
                             // create and show the alert dialog
                             AlertDialog dialog = builder.create();

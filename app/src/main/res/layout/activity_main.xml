@@ -83,13 +83,6 @@
             app:srcCompat="@drawable/ic_search_black_18dp" />
 
         <ImageButton
-            android:id="@+id/Notifications"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_notifications_black_18dp" />
-
-        <ImageButton
             android:id="@+id/My_projects"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
