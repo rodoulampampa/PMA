@@ -2,13 +2,19 @@ package com.pma;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -17,6 +23,7 @@ import java.util.ArrayList;
 
 public class ProjectNameActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ArrayList<ProjectName> projectName;
+    private ProjectDialogFragment projectDialFrag = new ProjectDialogFragment();
 
     @Override
     protected void onCreate (Bundle savedInstanceState){
@@ -466,4 +473,36 @@ public class ProjectNameActivity extends AppCompatActivity implements AdapterVie
         dialog.show();
 
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id ==  R.id.add_project) {
+            projectDialFrag.show();
+            return true;
+        }
+        else {
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    @Override
+    public void onDialogNegativeClick(DialogFragment dialog) {
+    }
+
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog) {
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.activity_project_dialog_fragment, null);
+
+        EditText editText = (EditText) view.findViewById(R.id.project_name);
+        String projectName = editText.getText().toString();
+        Button projectButton = new Button(this);
+        projectButton.setText(projectName);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.add_project);
+        linearLayout.addView(projectButton);
+
+    }
+
 }

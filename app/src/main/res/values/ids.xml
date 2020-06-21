@@ -4,4 +4,5 @@
     <item name="spinner" type="id" />
     <item name="btngocalendar" type="id" />
     <item name="date" type="id" />
+    <item name="add_project" type="id" />
 </resources>

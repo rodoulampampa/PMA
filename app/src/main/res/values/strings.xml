@@ -8,4 +8,6 @@
     <string name="No">No</string>
     <string name="app_label">label</string>
     <string name="pma">PMA</string>
+    <string name="conti_nue" />
+    <string name="cancel" />
 </resources>

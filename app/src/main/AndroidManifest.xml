@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Add_a_project"></activity>
+        <activity android:name=".ProjectDialogFragment"></activity>
+        <activity android:name=".Add_a_project" />
         <activity android:name=".CalendarActivity" />
         <activity android:name=".TeamRiskAssessmentActivity" />
         <activity android:name=".RiskAssessmentActivity" />
