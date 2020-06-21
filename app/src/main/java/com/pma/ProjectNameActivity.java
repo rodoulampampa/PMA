@@ -2,28 +2,30 @@ package com.pma;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static com.pma.MyProjectsActivity.loadProjects;
+import static com.pma.MyProjectsActivity.projects;
+import static com.pma.MyProjectsActivity.storeProjects;
+
 public class ProjectNameActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ArrayList<ProjectName> projectName;
-    private ProjectDialogFragment projectDialFrag = new ProjectDialogFragment();
 
     @Override
     protected void onCreate (Bundle savedInstanceState){
@@ -443,11 +445,51 @@ public class ProjectNameActivity extends AppCompatActivity implements AdapterVie
         }
         @NonNull
         @Override
-        public View getView(int position, View convertView, @NonNull ViewGroup parent){
+        public View getView(final int position, View convertView, @NonNull ViewGroup parent){
             View itemview = convertView;
             if(itemview == null){
                 itemview = ProjectNameActivity.this.getLayoutInflater().inflate(R.layout.add_to_my_project, parent, false);
             }
+
+            Button addButton = itemview.findViewById(R.id.button3);
+            addButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AlertDialog.Builder builderSingle = new AlertDialog.Builder(ProjectNameActivity.this);
+                    builderSingle.setTitle("Select a project:");
+
+                    projects = loadProjects(ProjectNameActivity.this);
+                    final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(ProjectNameActivity.this, android.R.layout.select_dialog_singlechoice);
+
+                    for(MyProject p : projects){
+                        arrayAdapter.add(p.description);
+                    }
+
+                    builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            projects.get(which).name = projectName.get(position).name;
+
+                            storeProjects(projects, ProjectNameActivity.this);
+
+                            Intent intent = new Intent(ProjectNameActivity.this, MyProjectsActivity.class);
+                            startActivity(intent);
+
+                            Toast.makeText(ProjectNameActivity.this, "Project Name Saved", Toast.LENGTH_LONG).show();
+                            finish();
+                        }
+                    });
+
+                    builderSingle.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+
+                    builderSingle.create().show();
+                }
+            });
 
 
             TextView text1 = itemview.findViewById(R.id.text1);
@@ -464,45 +506,46 @@ public class ProjectNameActivity extends AppCompatActivity implements AdapterVie
     /** Called when the user taps the Floating Action Button*/
     public void add_a_project_name(View view) {
 
-        // setup the alert builder
-        AlertDialog.Builder builder = new AlertDialog.Builder(ProjectNameActivity.this);
+        // Create an alert dialog builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        // Set the title
         builder.setTitle("Add a name:");
 
-        // create and show the alert dialog
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        // Inflate the view that contains the EditText and load the editText
+        View v = getLayoutInflater().inflate(R.layout.activity_project_dialog_fragment, null);
+        final EditText editText = v.findViewById(R.id.project_name);
 
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
+        // Set the alert dialog to use this view we just inflated
+        builder.setView(v);
 
-        if (id ==  R.id.add_project) {
-            projectDialFrag.show();
-            return true;
+        // Set a positive button with the text "Continue" to read the name written by the user and include it in the listview
+        builder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+
+                // Get the text the user wrote in the editText
+                String text = editText.getText().toString();
+
+                // Add a new entry in the list
+                projectName.add(new ProjectName(text));
+
+                // Find the listView
+                ListView listView = findViewById(R.id.category_names);
+
+                // Get the listView's adapter and notify it about the change
+                ((ProjectNameAdapter)listView.getAdapter()).notifyDataSetChanged();
+            }
+        });
+
+        // Set a negative button to close the dialog
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        builder.create().show();
+
         }
-        else {
-            return super.onOptionsItemSelected(item);
-        }
     }
-
-
-    @Override
-    public void onDialogNegativeClick(DialogFragment dialog) {
-    }
-
-    @Override
-    public void onDialogPositiveClick(DialogFragment dialog) {
-        LayoutInflater inflater = LayoutInflater.from(this);
-        View view = inflater.inflate(R.layout.activity_project_dialog_fragment, null);
-
-        EditText editText = (EditText) view.findViewById(R.id.project_name);
-        String projectName = editText.getText().toString();
-        Button projectButton = new Button(this);
-        projectButton.setText(projectName);
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.add_project);
-        linearLayout.addView(projectButton);
-
-    }
-
-}
